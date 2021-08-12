@@ -1,0 +1,10 @@
+trigger meetUpRegistrationTrigger on MeetupRegistration__c (before insert, before update, after insert, after update, after delete, before delete) {
+ if (trigger.isBefore && trigger.isInsert) {
+        
+        meetUpAppInfoAutomator.meetUpRegistrationAutomator(trigger.new);
+       //solved with validation rule 
+       meetUpAppInfoAutomator.conditionalMeetUpRegistartion(trigger.new);
+       
+        
+    } 
+}

@@ -1,0 +1,8 @@
+trigger meetUpTrigger on Meetup__c (before insert, before update, after insert, after update, after delete, before delete) {
+    if (trigger.isBefore && trigger.isInsert) {
+        
+         meetUpAppInfoAutomator.meetUpCodeAutomator(trigger.new);
+        
+    } 
+
+}

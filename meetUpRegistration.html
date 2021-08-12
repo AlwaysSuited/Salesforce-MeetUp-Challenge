@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+    <lightning-record-edit-form object-api-name={meetupregistrationObject}  onsuccess={handleSuccess}>
+       <!-- <lightning-messages></lightning-messages>
+        <lightning-input-field field-name='Id' value={meetupregistrationsId}></lightning-input-field>
+        <lightning-input-field field-name={nameField} >
+            </lightning-input-field> -->
+        <lightning-input-field field-name={meetupField}>
+            </lightning-input-field>
+        <lightning-input-field field-name={emailField}>
+            </lightning-input-field>  
+        <lightning-input-field field-name={firstnameField}>
+            </lightning-input-field>  
+        <lightning-input-field field-name={lastnameField}>
+            </lightning-input-field>
+        <lightning-button class="slds-m-top_small" label="Reset" onclick={handleReset}></lightning-button>
+        <lightning-button type="submit"
+                          name="submit"
+                          label="Create Registration"
+                          onclick={showSuccessToast}>
+            </lightning-button>
+    </lightning-record-edit-form>
+    </div>
+</template>
